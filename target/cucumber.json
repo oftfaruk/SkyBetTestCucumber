@@ -1,0 +1,59 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-01-17T03:03:58.594Z",
+        "line": 3,
+        "name": "",
+        "description": "",
+        "id": "verify-fixtures;",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2414940400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user retrieve fixtures",
+            "match": {
+              "location": "Fixtures.user_retrieve_fixtures()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 85889700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "there are 3 fixtures within the returned object",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 10
+                }
+              ],
+              "location": "Fixtures.there_are_fixtures_within_the_returned_object(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@hw"
+          }
+        ]
+      }
+    ],
+    "name": "Verify Fixtures",
+    "description": "",
+    "id": "verify-fixtures",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/fixture.feature",
+    "tags": []
+  }
+]
