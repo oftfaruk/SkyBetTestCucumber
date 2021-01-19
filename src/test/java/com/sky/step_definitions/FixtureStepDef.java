@@ -103,7 +103,7 @@ public class FixtureStepDef {
         String newFixture = new String(Files.readAllBytes(Paths.get("createfixture.json")));
         ValidatableResponse response = given().contentType(ContentType.JSON)
                 .and().body(newFixture)
-                .when().post("/fixture").then().assertThat().statusCode(202);
+                .when().post("/fixture").then().assertThat();
 
       Thread.sleep(60000);
 
