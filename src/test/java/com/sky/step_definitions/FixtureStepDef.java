@@ -93,7 +93,7 @@ public class FixtureStepDef {
     int postid;
 
     @When("User post a new fixture")
-    public void userPostANewFixture() throws IOException {
+    public void userPostANewFixture() throws IOException, InterruptedException {
 
         postid = getFixturesSize() + 1;
         String fileString = new String(Files.readAllBytes(Paths.get("createfixture.json")));
@@ -105,6 +105,7 @@ public class FixtureStepDef {
                 .and().body(newFixture)
                 .when().post("/fixture").then().assertThat().statusCode(202);
 
+      Thread.sleep(60000);
 
     }
 
