@@ -5,7 +5,7 @@ Feature: Verify Fixtures
     When User retrieves fixtures
     Then Status code should be 200
 
-  @hw
+  @wip
   Scenario: Fixtures Num
     Then There should be 3 fixtures within the returned object
 
